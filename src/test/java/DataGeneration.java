@@ -1,5 +1,3 @@
-package ru.netology.data;
-
 import com.github.javafaker.Faker;
 import lombok.Value;
 
@@ -13,7 +11,7 @@ public class DataGeneration {
     }
 
     public static String generateData(int days) {
-       return LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        return LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
 
     public static String generateCity() {
@@ -46,8 +44,8 @@ public class DataGeneration {
         private Registration() {
         }
 
-        public static UserInfo generateUser() {
-            return new UserInfo(generateCity(), genetareName(), generatePhone());
+        public static DataGeneration.UserInfo generateUser() {
+            return new DataGeneration.UserInfo(generateCity(), genetareName(), generatePhone());
         }
     }
 
