@@ -32,7 +32,7 @@ public class DataGeneration {
         return cities[new Random().nextInt(cities.length)];
     }
 
-    public static String genetareName() {
+    public static String generateName() {
         Faker faker = new Faker(new Locale("ru"));
         return  faker.name().lastName() + " " + faker.name().firstName();
     }
@@ -47,7 +47,7 @@ public class DataGeneration {
         }
 
         public static DataGeneration.UserInfo generateUser() {
-            return new DataGeneration.UserInfo(generateCity(), genetareName(), generatePhone());
+            return new DataGeneration.UserInfo(generateCity(), generateName(), generatePhone());
         }
     }
 
